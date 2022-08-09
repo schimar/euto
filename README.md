@@ -2,7 +2,7 @@
 
 ## Initial setup  
 
-In order to log into the ws, you need to log into the UIBK VPN and log into https://fwauth-ext.uibk.ac.at. Then, you can log in to euto with your username and password:  
+In order to log into the ws, you need to log into the UIBK VPN as well as https://fwauth-ext.uibk.ac.at. Then, you can log in to euto with your username and password:  
 
 ```
 ssh <user>@lt181-eutops.uibk.ac.at
