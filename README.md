@@ -48,11 +48,11 @@ smbnetfs ~/zidshare
 
 # to unmount:
 fusermount -u ~/zidshare 
-```
+
 
 ## to get into the drive with smbclient (similar to ftp) (see [here](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)   
 smbclient -U c7461138 -W UIBK //zidshare.uibk.ac.at/eutops
-
+```
 
 
 
