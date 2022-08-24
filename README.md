@@ -23,10 +23,37 @@ See [here](https://git.uibk.ac.at/c7701188/meg_tutorials/-/tree/master/bash) for
 Further, you'll need to get used to working with a text editor. [Which](http://www.geekherocomic.com/comics-highres/2009-02-02-emacs-vs-vim.png) one you choose among the only two [serious options](https://linuxhint.com/vim_vs_emacs/) is up to you, of course.  
 
 
-## Advanced usage
+# -------------------
 
-snakemake 
+## General setup  
 
-tmux 
+It might be beneficial to use ssh-keys instead of ssh-password. See this [quick guide](https://www.linuxbabe.com/linux-server/setup-passwordless-ssh-login) 
+
+
+
+## Mount ZIDshare drive with [smbnetfs](https://manpages.ubuntu.com/manpages/trusty/man1/smbnetfs.1.html)  
+(see also [here](https://www.uibk.ac.at/zid/anleitungen/laufwerkszugriff/netzlaufwerkverbindung-linux.html) for more info)  
+
+```
+mkdir ~/.smb; chmod 600 ~/.smb
+echo 'auth "zidshare.uibk.ac.at" "UIBK/cxxxx" "yyyyyyy"' > ~/.smb/smbnetfs.conf
+echo 'host zidshare.uibk.ac.at visible=true' >> ~/.smb/smbnetfs.conf
+chmod 600 ~/.smb/smbnetfs.conf
+mkdir ~/zidshare
+
+# mount zidshare  
+
+smbnetfs ~/zidshare
+# the files should be in ~/zidshare/zidshare.uibk.ac.at/eutops/
+
+# to unmount:
+fusermount -u ~/zidshare 
+```
+
+## to get into the drive with smbclient (similar to ftp) (see [here](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)   
+smbclient -U c7461138 -W UIBK //zidshare.uibk.ac.at/eutops
+
+
+
 
 
