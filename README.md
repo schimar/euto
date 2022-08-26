@@ -45,16 +45,22 @@ mkdir ~/zidshare
 
 smbnetfs ~/zidshare
 # the files should be in ~/zidshare/zidshare.uibk.ac.at/eutops/
+# NOTE: on the zidshare server, eutops/ is not set as "browsable", this is why the shell won't auto-complete nor give suggestions on its (sub-)directories. However, you can access all of its contents:
+.e.:
+
+ls -alhF ~/zidshare/zidshare.uibk.ac.at/eutops/
+
 
 # to unmount:
 fusermount -u ~/zidshare 
 
 
-## to get into the drive with smbclient (similar to ftp) (see [here](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)   
+
+## NOTE: to get into the drive with smbclient (similar to ftp) (see [here](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html)   
 smbclient -U c7461138 -W UIBK //zidshare.uibk.ac.at/eutops
 ```
 
-
+# 
 
 
 
