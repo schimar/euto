@@ -27,7 +27,9 @@ Further, you'll need to get used to working with a text editor. [Which](http://w
 
 ## General setup  
 
-It might be beneficial to use ssh-keys instead of ssh-password. See this [quick guide](https://www.linuxbabe.com/linux-server/setup-passwordless-ssh-login)  
+(This will be added to as we go along)   
+
+1) It might be beneficial to use ssh-keys instead of ssh-password. See this [quick guide](https://www.linuxbabe.com/linux-server/setup-passwordless-ssh-login)  
 
 
 <br/>
